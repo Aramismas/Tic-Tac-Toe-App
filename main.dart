@@ -120,6 +120,7 @@ class HomePageState extends State<HomePage> {
       checkWin(); // checks if a player won after their turn
     });
   }
+
   void checkWin() {
     // checks first row
     if (letter[0] != " " && (letter[0] == letter [1]) && (letter[1] == letter [2])) {
@@ -176,6 +177,7 @@ class HomePageState extends State<HomePage> {
       });
     }
   }
+
   void endGame(String player) {
     Future.delayed(const Duration(milliseconds: 700), () {
     showDialog( // displays replay message 
@@ -204,6 +206,7 @@ class HomePageState extends State<HomePage> {
       oScore++;
     }
   }
+
   void restart() { // cleans the board and the loser goes first
     setState(() {
       for (int i = 0; i < 9; i++) {
@@ -212,4 +215,5 @@ class HomePageState extends State<HomePage> {
       gameTurn = 0;
     });
   }
+  
 }
